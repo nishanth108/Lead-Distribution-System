@@ -1,56 +1,21 @@
-export default function HomePage() {
+import Link from 'next/link'
 
+export default function Home() {
   return (
-
-    <main
-      style={{
-        maxWidth: 700,
-        margin: '40px auto',
-        padding: '20px',
-        fontFamily: 'Arial'
-      }}
-    >
-
-      <h1>Lead Distribution System</h1>
-
-      <p>
-        Welcome to the Provider Allocation System
-      </p>
-
-      <div style={{ marginTop: 20 }}>
-
-        <a
-          href="/request-service"
-          style={{
-            display: 'inline-block',
-            padding: '12px 20px',
-            background: '#0070f3',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: 8,
-            marginRight: 12
-          }}
-        >
-          Request Service
-        </a>
-
-        <a
-          href="/dashboard"
-          style={{
-            display: 'inline-block',
-            padding: '12px 20px',
-            background: 'black',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: 8
-          }}
-        >
-          Open Dashboard
-        </a>
-
+    <main style={{ maxWidth: 400, margin: '80px auto', fontFamily: 'sans-serif', textAlign: 'center' }}>
+      <h1>Prowider</h1>
+      <p style={{ color: '#666', marginBottom: 32 }}>Lead Distribution System</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <Link href="/request-service" style={{ padding: '12px 24px', background: '#0070f3', color: '#fff', borderRadius: 8, textDecoration: 'none' }}>
+          Request a Service
+        </Link>
+        <Link href="/dashboard" style={{ padding: '12px 24px', background: '#fff', color: '#0070f3', border: '1px solid #0070f3', borderRadius: 8, textDecoration: 'none' }}>
+          Provider Dashboard
+        </Link>
+        <Link href="/test-tools" style={{ padding: '12px 24px', background: '#fff', color: '#666', border: '1px solid #ccc', borderRadius: 8, textDecoration: 'none' }}>
+          Test Tools
+        </Link>
       </div>
-
     </main>
-
   )
 }
